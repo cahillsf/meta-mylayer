@@ -6,5 +6,5 @@ network={
 	ssid="TODO"
 	scan_ssid=1
 	psk="TODO"
-        key_mgmt=WPA-PSK
+	key_mgmt=WPA-PSK
 }

@@ -1,5 +1,1 @@
-SUMMARY = "recipe to modify timezone"
-DESCRIPTION = "Recipe created by David Gherghita"
-LICENSE = "CLOSED"
-
-DEFAULT_TIMEZONE = "TODO"
+DEFAULT_TIMEZONE = "America/New_York"
