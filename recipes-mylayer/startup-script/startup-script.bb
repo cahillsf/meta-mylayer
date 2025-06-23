@@ -11,7 +11,7 @@ INITSCRIPT_NAME = "startup-script.sh"
 
 SRC_URI = "file://startup-script.sh"
 
-S = "${WORKDIR}"
+S = "${THISDIR}"
 
 do_install() {
     install -d ${D}${INIT_D_DIR}

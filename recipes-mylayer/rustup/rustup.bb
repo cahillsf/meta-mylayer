@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SRC_URI = "file://rustup-init.sh"
 
-S = "${WORKDIR}"
+S = "${THISDIR}"
 
 do_install() {
     install -d ${D}${ROOT_HOME}
