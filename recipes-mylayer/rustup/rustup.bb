@@ -2,6 +2,7 @@ SUMMARY = "recipe to copy rustup-init script"
 DESCRIPTION = "Recipe created by David Gherghita"
 LICENSE = "CLOSED"
 
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SRC_URI = "file://rustup-init.sh"
 
 do_install() {
