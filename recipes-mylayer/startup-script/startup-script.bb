@@ -15,4 +15,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/startup-script.sh ${D}${INIT_D_DIR}
 }
 
-FILES_${PN} = "${INIT_D_DIR}/startup-script.sh"
+FILES:${PN} = "${INIT_D_DIR}/startup-script.sh"

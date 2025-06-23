@@ -9,4 +9,4 @@ do_install() {
     install -m 0755 ${WORKDIR}/rustup-init.sh ${D}${ROOT_HOME}
 }
 
-FILES_${PN} = "${ROOT_HOME}/rustup-init.sh"
+FILES:${PN} = "${ROOT_HOME}/rustup-init.sh"
