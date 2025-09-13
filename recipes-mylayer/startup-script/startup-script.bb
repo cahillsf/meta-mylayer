@@ -3,7 +3,7 @@ SUMMARY = "recipe to copy startup script file to rootfs \
 DESCRIPTION = "Recipe created by David Gherghita"
 LICENSE = "CLOSED"
 
-inherit update-rc.d
+inherit update-rc.d extrausers
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 INITSCRIPT_PACKAGES = "${PN}"
