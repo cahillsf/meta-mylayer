@@ -3,6 +3,8 @@ SUMMARY = "recipe to copy startup script file to rootfs \
 DESCRIPTION = "Recipe created by David Gherghita"
 LICENSE = "CLOSED"
 
+RDEPENDS:${PN} += "bash"
+
 inherit update-rc.d extrausers
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
