@@ -11,11 +11,11 @@ INITSCRIPT_NAME = "startup-script.sh"
 
 SRC_URI = "file://startup-script.sh"
 
-S = "${UNPACKDIR}"
+S = "${WORKDIR}"
 
 do_install() {
     install -d ${D}${INIT_D_DIR}
-    install -m 0755 ${UNPACKDIR}/startup-script.sh ${D}${INIT_D_DIR}
+    install -m 0755 ${WORKDIR}/startup-script.sh ${D}${INIT_D_DIR}
 }
 
 FILES:${PN} += "${INIT_D_DIR}/startup-script.sh"
