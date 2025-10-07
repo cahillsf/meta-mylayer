@@ -11,6 +11,15 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME = "startup-script.sh"
 
+PI_USER_PASSWORD ?= "raspberry"
+
+EXTRA_USERS_PARAMS = "\
+  useradd -m -s /bin/bash pi; \
+  usermod -p '${@oe.utils.crypt_password(d.getVar('PI_USER_PASSWORD') or 'raspberry')}' pi; \
+"
+
+
+
 SRC_URI = "file://startup-script.sh"
 
 S = "${WORKDIR}"
