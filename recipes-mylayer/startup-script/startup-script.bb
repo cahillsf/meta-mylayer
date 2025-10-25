@@ -11,7 +11,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME = "startup-script.sh"
 
-PI_USER_PASSWORD_HASH ?= "\$6\$8qsrzOSpX7kI31Vx\$jUz6wZ0kpPxKayMaQpj2GSB8op56rWbm6ASQ8xtwLglRO2ATRJ.09/Sg.vmwxzylXoLZq8YUFw.yZHpmG8IhQ1"
+PI_USER_PASSWORD_HASH ?= "$6$IiEaFtvk2qb7wdz9$PXdK8EYOEfYLDR9kNLplisQQ7G6ZLlvyihH/L8HdhIg6WA/olTwuu43UcIsPv9xnY9mqxvlWcBu6eDebFZJzz/"
 
 EXTRA_USERS_PARAMS = "\
   useradd -m -s /bin/bash pi; \
