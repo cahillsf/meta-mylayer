@@ -11,11 +11,11 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME = "startup-script.sh"
 
-PI_USER_PASSWORD ?= "raspberry"
+PI_USER_PASSWORD_HASH ?= "\$6\$8qsrzOSpX7kI31Vx\$jUz6wZ0kpPxKayMaQpj2GSB8op56rWbm6ASQ8xtwLglRO2ATRJ.09/Sg.vmwxzylXoLZq8YUFw.yZHpmG8IhQ1"
 
 EXTRA_USERS_PARAMS = "\
   useradd -m -s /bin/bash pi; \
-  usermod -p '${@oe.utils.crypt_password(d.getVar('PI_USER_PASSWORD') or 'raspberry')}' pi; \
+  usermod -p '${PI_USER_PASSWORD_HASH}' pi; \
 "
 
 
