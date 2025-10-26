@@ -1,0 +1,3 @@
+# Global environment variables injected from build
+# This file will be installed to /etc/environment
+DATADOG_API_KEY=__DATADOG_API_KEY__
