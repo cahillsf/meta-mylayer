@@ -5,19 +5,11 @@ LICENSE = "CLOSED"
 
 RDEPENDS:${PN} += "bash"
 
-inherit update-rc.d extrausers
+inherit update-rc.d
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME = "startup-script.sh"
-
-PI_USER_PASSWORD_HASH ?= "$6$IiEaFtvk2qb7wdz9$PXdK8EYOEfYLDR9kNLplisQQ7G6ZLlvyihH/L8HdhIg6WA/olTwuu43UcIsPv9xnY9mqxvlWcBu6eDebFZJzz/"
-
-EXTRA_USERS_PARAMS = "\
-  useradd -m -s /bin/bash pi; \
-  usermod -p '${PI_USER_PASSWORD_HASH}' pi; \
-"
-
 
 
 SRC_URI = "file://startup-script.sh"
